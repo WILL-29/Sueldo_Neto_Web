@@ -14,25 +14,28 @@
         <title>Calculadora</title>
     </head>
     <body>
-            <h4 class="center"><b>Calculadora de descuentos</b></h4>
-            <hr>
-            </br>
-            </br>
-        <div class="container center row">
-            <div class="input-field col s6">                
+    <div class="container">
+        <h4 class="center"><b>Calculadora de descuentos</b></h4>
+        <hr>
+        </br>
+        </br>
+        <div class="container center row col s12">
+            <div class="input-field col s3 offset-s3">                
                 <i class="material-icons prefix">paid</i>
                 <label for="tbSb">Sueldo bruto</label>
                 <input type="text" id="tbSb">               
             </div>  
-
-            <a id="btnCalcular" class="btn waves-effect col s6" href="#"><i class="material-icons right">calculate</i> Calcular</a>          
-            <!-- <button id="btnCalcular" class="btn waves-effect waves-light col s6">Calcular</button> -->            
+            <div>
+                <br/>
+                <a id="btnCalcular" class="btn waves-effect col s3" href="#"><i class="material-icons right">calculate</i> Calcular</a>                          
+            </div>                        
         </div>  
         <div>
-            <p class="container center" id="pResultado">
+            <p class="center" id="pResultado">
                 Aquí aparecerán los resultados
-             </p>
-        </div>              
+            </p>
+        </div>   
+    </div>           
     </body>
 
     <!--JavaScript at end of body for optimized loading-->
