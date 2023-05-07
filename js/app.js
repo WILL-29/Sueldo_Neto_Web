@@ -53,5 +53,5 @@ function CalcularEImprimir(Sueldo){
     $('#pResultado').append("</br>");
     $('#pResultado').append('Descuento total es ' + (DescAFP(Sueldo) + DescARS(Sueldo) + DescISR(Sueldo)).toFixed(1));
     $('#pResultado').append("</br>");
-    $('#pResultado').append('El SUeldo NETO es: ' + (Sueldo - (DescAFP(Sueldo) + DescARS(Sueldo) + DescISR(Sueldo))).toFixed(1));
+    $('#pResultado').append('El Sueldo NETO es: ' + (Sueldo - (DescAFP(Sueldo) + DescARS(Sueldo) + DescISR(Sueldo))).toFixed(1));
 }
