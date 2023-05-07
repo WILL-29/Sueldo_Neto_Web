@@ -43,15 +43,22 @@ function DescISR(sb) {
     }
 }
 
+//This is my formatter
+const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  
+}); 
+
 function CalcularEImprimir(Sueldo){
     Sueldo = $('#tbSb').val();   
-    $('#pResultado').text('Descuento AFP es ' + DescAFP(Sueldo).toFixed(1));
+    $('#pResultado').text('Descuento AFP es ' + formatter.format(DescAFP(Sueldo)));
     $('#pResultado').append("</br>");
-    $('#pResultado').append('Descuento ARS es ' + DescARS(Sueldo).toFixed(1));
+    $('#pResultado').append('Descuento ARS es ' + formatter.format(DescARS(Sueldo)));
     $('#pResultado').append("</br>");
-    $('#pResultado').append('Descuento ISR es ' + DescISR(Sueldo).toFixed(1));
+    $('#pResultado').append('Descuento ISR es ' + formatter.format(DescISR(Sueldo)));
     $('#pResultado').append("</br>");
-    $('#pResultado').append('Descuento total es ' + (DescAFP(Sueldo) + DescARS(Sueldo) + DescISR(Sueldo)).toFixed(1));
+    $('#pResultado').append('Descuento total es ' + formatter.format((DescAFP(Sueldo) + DescARS(Sueldo) + DescISR(Sueldo))));    
     $('#pResultado').append("</br>");
-    $('#pResultado').append('El Sueldo NETO es: ' + (Sueldo - (DescAFP(Sueldo) + DescARS(Sueldo) + DescISR(Sueldo))).toFixed(1));
+    $('#pResultado').append('El Sueldo NETO es: ' + formatter.format((Sueldo - (DescAFP(Sueldo) + DescARS(Sueldo) + DescISR(Sueldo)))));
 }
